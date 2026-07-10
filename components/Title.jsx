@@ -1,17 +1,48 @@
 'use client'
+
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
 
-const Title = ({ title, description, visibleButton = true, href = '' }) => {
+const Title = ({
+    title,
+    description,
+    visibleButton = true,
+    href = ''
+}) => {
 
     return (
-        <div className='flex flex-col items-center'>
-            <h2 className='text-2xl font-semibold text-slate-800'>{title}</h2>
-            <Link href={href} className='flex items-center gap-5 text-sm text-slate-600 mt-2'>
-                <p className='max-w-lg text-center'>{description}</p>
-                {visibleButton && <button className='text-green-500 flex items-center gap-1'>View more <ArrowRight size={14} /></button>}
-            </Link>
+        <div className="flex flex-col items-center text-center mb-14">
+
+            {/* Small Label */}
+            <span className="uppercase tracking-[0.25em] text-amber-700 text-sm font-semibold">
+                Singh Impex Collection
+            </span>
+
+            {/* Heading */}
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-slate-800">
+                {title}
+            </h2>
+
+            {/* Description */}
+            <p className="mt-4 max-w-2xl text-slate-500 leading-7">
+                {description}
+            </p>
+
+            {/* Button */}
+            {visibleButton && (
+                <Link
+                    href={href}
+                    className="group mt-7 inline-flex items-center gap-2 text-amber-700 font-semibold hover:text-amber-800 transition"
+                >
+                    View All Products
+
+                    <ArrowRight
+                        size={18}
+                        className="group-hover:translate-x-1 transition"
+                    />
+                </Link>
+            )}
+
         </div>
     )
 }

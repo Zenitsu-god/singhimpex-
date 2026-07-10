@@ -1,16 +1,24 @@
 import { Star } from "lucide-react";
-import React from "react";
 
 const Rating = ({ value = 4 }) => {
 
     return (
-        <div className="flex items-center">
+        <div className="flex items-center gap-0.5">
+
             {Array.from({ length: 5 }, (_, i) => (
+
                 <Star
                     key={i}
-                    className={`shrink-0 size-4 fill-current ${value > i ? "text-green-400" : "text-gray-300"}`}
+                    size={16}
+                    className={`transition-colors ${
+                        value > i
+                            ? "text-amber-500 fill-amber-500"
+                            : "text-gray-300"
+                    }`}
                 />
+
             ))}
+
         </div>
     );
 };

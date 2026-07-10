@@ -20,6 +20,14 @@ import { ClockFadingIcon, HeadsetIcon, SendIcon } from "lucide-react";
 import profile_pic1 from "./profile_pic1.jpg"
 import profile_pic2 from "./profile_pic2.jpg"
 import profile_pic3 from "./profile_pic3.jpg"
+import {
+    ShieldCheck,
+    Hammer,
+    Globe,
+    CreditCard,
+    Truck,
+    Headset,
+} from "lucide-react";
 
 export const assets = {
     upload_area, hero_model_img,
@@ -28,7 +36,20 @@ export const assets = {
     product_img7, product_img8, product_img9, product_img10, product_img11, product_img12,
 }
 
-export const categories = ["Headphones", "Speakers", "Watch", "Earbuds", "Mouse", "Decoration"];
+export const categories = [
+    "Leather Bags",
+    "Wallets",
+    "Belts",
+    "Backpacks",
+    "Laptop Bags",
+    "Travel Bags",
+    "Handbags",
+    "Card Holders",
+    "Accessories",
+    "Duffel Bags",
+    "Messenger Bags",
+    "Office Bags",
+];
 
 export const dummyRatingsData = [
     { id: "rat_1", rating: 4.2, review: "I was a bit skeptical at first, but this product turned out to be even better than I imagined. The quality feels premium, it's easy to use, and it delivers exactly what was promised. I've already recommended it to friends and will definitely purchase again in the future.", user: { name: 'Kristin Watson', image: profile_pic1 }, productId: "prod_1", createdAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', updatedAt: 'Sat Jul 19 2025 14:51:25 GMT+0530 (India Standard Time)', product: { name: 'Bluetooth Speakers', category:'Electronics', id:'prod_1'} },
@@ -244,11 +265,56 @@ export const productDummyData = [
     }
 ];
 
+// export const ourSpecsData = [
+//     { title: "Free Shipping", description: "Enjoy fast, free delivery on every order no conditions, just reliable doorstep.", icon: SendIcon, accent: '#05DF72' },
+//     { title: "7 Days easy Return", description: "Change your mind? No worries. Return any item within 7 days.", icon: ClockFadingIcon, accent: '#FF8904' },
+//     { title: "24/7 Customer Support", description: "We're here for you. Get expert help with our customer support.", icon: HeadsetIcon, accent: '#A684FF' }
+// ]
+
 export const ourSpecsData = [
-    { title: "Free Shipping", description: "Enjoy fast, free delivery on every order no conditions, just reliable doorstep.", icon: SendIcon, accent: '#05DF72' },
-    { title: "7 Days easy Return", description: "Change your mind? No worries. Return any item within 7 days.", icon: ClockFadingIcon, accent: '#FF8904' },
-    { title: "24/7 Customer Support", description: "We're here for you. Get expert help with our customer support.", icon: HeadsetIcon, accent: '#A684FF' }
-]
+    {
+        title: "Genuine Leather",
+        description:
+            "Crafted from premium-quality genuine leather for durability, comfort and timeless elegance.",
+        icon: ShieldCheck,
+        accent: "#B45309",
+    },
+    {
+        title: "Expert Craftsmanship",
+        description:
+            "Every product is carefully handcrafted with precision and attention to every detail.",
+        icon: Hammer,
+        accent: "#92400E",
+    },
+    {
+        title: "Export Quality",
+        description:
+            "Manufactured to meet international quality standards and trusted by customers worldwide.",
+        icon: Globe,
+        accent: "#D97706",
+    },
+    {
+        title: "Secure Payments",
+        description:
+            "Enjoy safe and secure online payments with trusted payment gateways.",
+        icon: CreditCard,
+        accent: "#C2410C",
+    },
+    {
+        title: "Fast Delivery",
+        description:
+            "Reliable and fast shipping across India with secure packaging for every order.",
+        icon: Truck,
+        accent: "#A16207",
+    },
+    {
+        title: "Customer Support",
+        description:
+            "Our dedicated support team is always ready to assist you before and after your purchase.",
+        icon: Headset,
+        accent: "#B45309",
+    },
+];
 
 export const addressDummyData = {
     id: "addr_1",
